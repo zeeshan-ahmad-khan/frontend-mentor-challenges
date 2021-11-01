@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-main: hsl(207, 26%, 17%);
+    --bg-sec: hsl(209, 23%, 22%);
+    --head-text: hsl(0, 0%, 100%);
+    --head-text-light: hsl(0, 0%, 88%);
+    --box-shadow: hsl(200, 15%, 8%);
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--bg-main);
+    color: var(--head-text);
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+/* HOME PAGE */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 0 5px var(--box-shadow);
+    background: var(--bg-sec);
+}
+
+.mode {
+    font-weight: lighter;
+    font-size: 1rem;
+}
+
+.filter-search {
+    padding: 1.5rem;
+}
+
+.search {
+    background: var(--bg-sec);
+    box-shadow: 0 0 3px var(--box-shadow);
+    padding: 0.3rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--head-text-light);
+}
+
+.search input {
+    outline: none;
+    border: none;
+    background: none;
+    padding: 0.7rem;
+    color: var(--head-text)
+}
+
+.search input::placeholder{
+    color: var(--head-text);
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--bg-sec);
+    border: none;
+    color: var(--head-text-light);
+    padding: 1rem 0;
+    width: 200px;
+    border-radius: 7px;
+    cursor: pointer;
+    position: relative;
+}
+
+.select-list{
+    position: absolute;
+    top: 55px;
+}
+
+.disable {
+    display: none;
+}
+
+.option{
+    width: 200px;
+    padding: 0.5rem 1.5rem;
+    text-align: left;
+    background: var(--bg-sec);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.option:hover {
+    color: var(--head-text);
+}
+
+.countries-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.country {
+    background: var(--bg-sec);
+    margin: 2rem auto;
+    width: 75%;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.country a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.flag img{
+    width: 100%;
+}
+
+.info {
+    font-size: 14px;
+    margin: 1.5rem;
+}
+
+.info h3 {
+    margin: 0.5rem 0;
+}
+
+.info span {
+    font-weight: lighter;
+}
+
+/* DETAILS PAGE */
+.container {
+    font-size: 14px;
+}
+
+.button {
+    background: var(--bg-sec);
+    box-shadow: 0 0 3px var(--box-shadow);
+    text-align: right;
+    padding: 0.5rem 1.5rem 0.5rem 2rem;
+    margin: 2rem;
+    border-radius: 5px;
+    width: 120px;
+}
+
+.container a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.details-container {
+    width: 75%;
+    margin: 2rem auto;
+}
+
+.image-container {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.image-container img {
+    width: 100%;
+}
+
+.detail-info {
+    width: 100%;
+}
+
+.detail-info h3 {
+    font-weight: normal;
+}
+
+.neighbours {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.n {
+    margin: 1rem 1px;
+}
+
+.detail-info span {
+    color: var(--head-text-light);
+}
+
+.detail-info h3 {
+    margin: 0.5rem 0;
+}
+
+@media screen and (min-width: 1440px) {
+    .countries-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .details-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .image-container {
+        margin-right: 3rem;
+    }
+}
